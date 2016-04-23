@@ -72,7 +72,7 @@ void printHelp(char* name)
     cout << "Usage: " << name << " "
          << "-b BIG_IMAGE_FILE_NAME "
          << "-s SMALL_IMAGE_DIR "
-         << "-r NUM_COLUMN "
-         << "-c NUM_ROW"
+         << "-r NUM_ROW "
+         << "-c NUM_COLUMN"
          << endl;
 }
