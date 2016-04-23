@@ -2,6 +2,9 @@
 #include <algorithm>
 #include <string>
 #include <sstream>
+#include <exception>
+#include "BigImage.hpp"
+#include "SmallImageSet.hpp"
 
 using namespace std;
 
@@ -38,7 +41,15 @@ int main(int argc, char* argv[])
         printHelp(argv[0]);
         return 0;
     }
-    // TODO
+    try {
+        BigImage bigImage(bigImageFileName, numRow, numColumn);
+        SmallImageSet smallImageSet(smallImageDirName);
+        bigImage.match(smallImageSet);
+        bigImage.output();
+    }
+    catch (exception& e) {
+        cout << e.what() << endl;
+    }
     return 0;
 }
 
