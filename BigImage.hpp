@@ -13,7 +13,7 @@ class BigImage {
 public:
     BigImage(string fileName, int numRow, int numColumn);
     ~BigImage();
-    void match(SmallImageSet& smallImageSet);
+    void match(const SmallImageSet& smallImageSet);
     void output();
 
 private:
