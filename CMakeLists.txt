@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
 project(ImageRecognition)
 find_package(OpenCV REQUIRED)
-add_executable(ImageRecognition main.cpp BigImage.cpp SmallImageSet.cpp exceptions.cpp)
+add_executable(ImageRecognition main.cpp BigImage.cpp SmallImage.cpp SmallImageSet.cpp exceptions.cpp)
 target_link_libraries(ImageRecognition ${OpenCV_LIBS})

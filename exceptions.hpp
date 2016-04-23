@@ -16,4 +16,10 @@ private:
     string mFileName;
 };
 
+class EmptySmallImageListException : public exception {
+public:
+    virtual const char* what() const throw();
+};
+
+
 #endif

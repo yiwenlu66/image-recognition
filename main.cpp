@@ -42,8 +42,8 @@ int main(int argc, char* argv[])
         printHelp(argv[0]);
         return 0;
     }
-    SmallImageSet smallImageSet(smallImageList);
     try {
+        SmallImageSet smallImageSet(smallImageList);
         ifstream bigImageListStream(bigImageList.c_str());
         string bigImageFileName;
         BigImage* bigImage;
