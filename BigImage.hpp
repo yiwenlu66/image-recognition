@@ -19,6 +19,7 @@ public:
 private:
     Mat mImage;
     int mNumRow, mNumColumn;
+    Size mBlockSize;
     vector<Mat*> mBlocks;
     vector<string> mMatchResults;
 };

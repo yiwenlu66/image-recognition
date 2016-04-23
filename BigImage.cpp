@@ -14,12 +14,22 @@ BigImage::BigImage(string fileName, int numRow, int numColumn)
     if (mImage.empty()) {
         throw * (new CannotOpenImageException(fileName));
     }
-    // TODO
+    int height = mImage.rows, width = mImage.cols;
+    mBlockSize.height = height / numRow;
+    mBlockSize.width = width / numColumn;
+    for (int i = 0; i < numRow; ++i) {
+        for (int j = 0; j < numColumn; ++j) {
+            Rect blockArea(j * mBlockSize.width, i * mBlockSize.height, mBlockSize.width, mBlockSize.height);
+            mBlocks.push_back(new Mat(mImage, blockArea));
+        }
+    }
 }
 
 BigImage::~BigImage()
 {
-    // TODO
+    for (auto block: mBlocks) {
+        delete block;
+    }
 }
 
 void BigImage::match(const SmallImageSet& smallImageSet)
