@@ -10,7 +10,7 @@ using namespace std;
 
 class SmallImageSet {
 public:
-    SmallImageSet(string dirName);
+    SmallImageSet(string listFileName);
     ~SmallImageSet();
     const vector<Mat*>& getSmallImageVector();
 

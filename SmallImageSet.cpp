@@ -1,6 +1,6 @@
 #include "SmallImageSet.hpp"
 
-SmallImageSet::SmallImageSet(string dirName)
+SmallImageSet::SmallImageSet(string listFileName)
 {
     // TODO
 }

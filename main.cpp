@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <algorithm>
 #include <string>
 #include <sstream>
@@ -28,8 +29,8 @@ int main(int argc, char* argv[])
         printHelp(argv[0]);
         return 0;
     }
-    string bigImageFileName = getCmdOption(argv, argv + argc, "-b");
-    string smallImageDirName = getCmdOption(argv, argv + argc, "-s");
+    string bigImageList = getCmdOption(argv, argv + argc, "-b");
+    string smallImageList = getCmdOption(argv, argv + argc, "-s");
     int numRow = -1, numColumn = -1;
     stringstream ss;
     ss << getCmdOption(argv, argv + argc, "-r");
@@ -41,11 +42,19 @@ int main(int argc, char* argv[])
         printHelp(argv[0]);
         return 0;
     }
+    SmallImageSet smallImageSet(smallImageList);
     try {
-        BigImage bigImage(bigImageFileName, numRow, numColumn);
-        SmallImageSet smallImageSet(smallImageDirName);
-        bigImage.match(smallImageSet);
-        bigImage.output();
+        ifstream bigImageListStream(bigImageList.c_str());
+        string bigImageFileName;
+        BigImage* bigImage;
+        while (getline(bigImageListStream, bigImageFileName)) {
+            bigImage = new BigImage(bigImageFileName, numRow, numColumn);
+            bigImage->match(smallImageSet);
+            cout << bigImageFileName << ":" << endl;
+            bigImage->output();
+            cout << endl;
+            delete bigImage;
+        }
     }
     catch (exception& e) {
         cout << e.what() << endl;
@@ -70,8 +79,8 @@ bool cmdOptionExists(char** begin, char** end, const string& option)
 void printHelp(char* name)
 {
     cout << "Usage: " << name << " "
-         << "-b BIG_IMAGE_FILE_NAME "
-         << "-s SMALL_IMAGE_DIR "
+         << "-b BIG_IMAGE_LIST "
+         << "-s SMALL_IMAGE_LIST "
          << "-r NUM_ROW "
          << "-c NUM_COLUMN"
          << endl;
