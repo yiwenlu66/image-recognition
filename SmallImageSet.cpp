@@ -23,7 +23,7 @@ SmallImageSet::~SmallImageSet()
     }
 }
 
-const vector<SmallImage*>& SmallImageSet::getSmallImageVector()
+const vector<SmallImage*>& SmallImageSet::getSmallImageVector() const
 {
     return mSmallImageVector;
 }

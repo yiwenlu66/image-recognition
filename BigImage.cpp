@@ -1,7 +1,8 @@
 #include <iostream>
+#include "opencv2/highgui/highgui.hpp"
 #include "exceptions.hpp"
 #include "BigImage.hpp"
-#include "opencv2/highgui/highgui.hpp"
+#include "utils.hpp"
 
 using namespace std;
 using namespace cv;
@@ -27,18 +28,34 @@ BigImage::BigImage(string fileName, int numRow, int numColumn)
 
 BigImage::~BigImage()
 {
-    for (auto block: mBlocks) {
+    for (auto block : mBlocks) {
         delete block;
     }
 }
 
 void BigImage::match(const SmallImageSet& smallImageSet)
 {
-    // TODO
+    for (auto block : mBlocks) {
+        double bestMatchValue = -1;
+        string bestMatchName;
+        double matchValue;
+        for (auto smallImage : smallImageSet.getSmallImageVector()) {
+            matchValue = matchAlgorithm(smallImage->getImage(), *block);
+            if (matchValue > bestMatchValue) {
+                bestMatchValue = matchValue;
+                bestMatchName = smallImage->getName();
+            }
+        }
+        mMatchResults.push_back(bestMatchName);
+    }
 }
 
 void BigImage::output()
 {
-    cout << "output" << endl;
-    // TODO
+    for (int i = 0; i < mNumRow * mNumColumn; ++i) {
+        cout << mMatchResults[i] << " ";
+        if ((i + 1) % mNumColumn == 0) {
+            cout << endl;
+        }
+    }
 }

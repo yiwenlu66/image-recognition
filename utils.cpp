@@ -30,3 +30,9 @@ string stripDirectory(string fileName)
     }
     return result;
 }
+
+double matchAlgorithm(const Mat& image1, const Mat& image2)
+{
+    // TODO
+    return 0;
+}
