@@ -1,16 +1,22 @@
 #include "SmallImage.hpp"
+#include "exceptions.hpp"
+#include "utils.hpp"
 
 SmallImage::SmallImage(string fileName)
 {
-    // TODO
+    mImage = imread(fileName);
+    if (mImage.empty()) {
+        throw * (new CannotOpenImageException(fileName));
+    }
+    mName = stripExtension(fileName);
 }
 
 const Mat& SmallImage::getImage()
 {
-    // TODO
+    return mImage;
 }
 
 string SmallImage::getName()
 {
-    // TODO
+    return mName;
 }

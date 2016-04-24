@@ -18,10 +18,12 @@ SmallImageSet::SmallImageSet(string listFileName)
 
 SmallImageSet::~SmallImageSet()
 {
-    // TODO
+    for (auto item: mSmallImageVector) {
+        delete item;
+    }
 }
 
-const vector<Mat*>& SmallImageSet::getSmallImageVector()
+const vector<SmallImage*>& SmallImageSet::getSmallImageVector()
 {
-    //TODO
+    return mSmallImageVector;
 }

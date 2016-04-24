@@ -12,7 +12,7 @@ class SmallImageSet {
 public:
     SmallImageSet(string listFileName);
     ~SmallImageSet();
-    const vector<Mat*>& getSmallImageVector();
+    const vector<SmallImage*>& getSmallImageVector();
 
 private:
     vector<SmallImage*> mSmallImageVector;
