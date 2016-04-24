@@ -10,10 +10,13 @@ string stripExtension(string fileName)
     while (getline(ss, item, '.')) {
         split.push_back(item);
     }
+    string result = "";
     split.pop_back();
-    ss.clear();
-    for (auto item : split) {
-        ss << item << ".";
+    for (size_t i = 0; i < split.size(); ++i) {
+        result += split[i];
+        if (i < split.size() - 1) {
+            result += ".";
+        }
     }
-    return ss.str();
+    return result;
 }
