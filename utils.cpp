@@ -20,3 +20,13 @@ string stripExtension(string fileName)
     }
     return result;
 }
+
+string stripDirectory(string fileName)
+{
+    string result, item;
+    stringstream ss(fileName);
+    while (getline(ss, item, '/')) {
+        result = item;
+    }
+    return result;
+}

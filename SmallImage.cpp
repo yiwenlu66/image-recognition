@@ -8,7 +8,7 @@ SmallImage::SmallImage(string fileName)
     if (mImage.empty()) {
         throw * (new CannotOpenImageException(fileName));
     }
-    mName = stripExtension(fileName);
+    mName = stripExtension(stripDirectory(fileName));
 }
 
 const Mat& SmallImage::getImage()
