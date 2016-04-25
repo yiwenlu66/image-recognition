@@ -1,0 +1,100 @@
+images/big/01.png:
+b01 s04 s09 s01 s03 
+s08 s10 s01 s10 s11 
+s09 s07 s06 s04 w01 
+
+images/big/02.png:
+s05 s01 s09 s09 s04 
+s08 s09 w01 s03 s08 
+s10 s02 s08 s08 s06 
+
+images/big/03.png:
+s08 s06 s04 s08 s01 
+s09 w01 s07 b01 s06 
+w01 s08 s05 s10 s11 
+
+images/big/04.png:
+s07 s04 s10 s09 s04 
+s04 s10 s03 s03 s08 
+s10 s07 s11 s08 s06 
+
+images/big/05.png:
+s01 s06 s05 s09 s04 
+s08 w01 s11 s04 s08 
+s05 s08 b01 s11 s06 
+
+images/big/06.png:
+s10 s03 s09 s09 s10 
+s05 s08 s04 s10 w01 
+s08 s06 s08 s04 s07 
+
+images/big/07.png:
+s10 s09 s04 s01 s06 
+s05 s05 s07 s10 s04 
+s08 s11 s05 s04 s08 
+
+images/big/08.png:
+s02 s02 s09 s10 s01 
+s11 s10 w01 s04 s10 
+s10 s01 s08 s06 s05 
+
+images/big/09.png:
+s09 s05 s11 s04 s07 
+s06 s09 s09 s09 s05 
+s04 s04 s01 s03 s09 
+
+images/big/10.png:
+s05 s09 s04 s07 s05 
+s07 s04 s06 s03 s06 
+s04 s08 s07 s09 s09 
+
+images/big/11.png:
+s10 s03 s10 s08 s10 
+s05 s08 s04 s05 s05 
+s08 s06 s06 s10 s06 
+
+images/big/12.png:
+s08 s09 w01 s08 s09 
+s05 s05 s08 b01 s02 
+s07 s11 s10 s10 s08 
+
+images/big/13.png:
+s04 s09 s11 s06 s01 
+s10 s04 s04 w01 s10 
+s01 s08 s07 s07 s05 
+
+images/big/14.png:
+s10 s09 s11 s06 s07 
+s05 s08 s05 s02 s05 
+s08 s05 s10 s09 s09 
+
+images/big/15.png:
+s08 s10 w01 s08 s01 
+s09 s07 s08 s05 s06 
+w01 s02 s10 s09 s11 
+
+images/big/16.png:
+s11 s07 s11 s04 s09 
+s10 s01 b01 s09 s02 
+b01 s09 s07 s03 s07 
+
+images/big/17.png:
+s10 s01 s04 s09 s08 
+w01 s11 s07 s04 s04 
+s08 b01 s05 s11 s11 
+
+images/big/18.png:
+s02 s02 s08 s09 s06 
+s11 s10 s10 s04 s09 
+s10 s01 s03 s11 b01 
+
+images/big/19.png:
+s08 s02 w01 s07 s10 
+s02 s09 s08 s03 s05 
+s11 s08 s10 s09 s08 
+
+images/big/20.png:
+s02 s06 s08 s09 s11 
+s11 w01 s11 s03 w01 
+s10 s08 s04 s08 s09 
+
